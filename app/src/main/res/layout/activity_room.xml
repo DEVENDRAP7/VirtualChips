@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg_gradient_main">
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnEndGame"
+            android:backgroundTint="#635147"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Game"
+            android:textColor="#FFD700"
+            android:layout_marginRight="175dp"/>
+
+        <Button
+            android:backgroundTint="#635147"
+            android:id="@+id/btnLeaveRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFD700"
+            android:text="Leave"/>
+    </LinearLayout>
+
+    <!-- POOL DISPLAY -->
+    <TextView
+        android:id="@+id/tvPool"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="💰 Pool: 0"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#F1C40F"
+        android:gravity="center"
+        android:background="@drawable/bg_card"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <!-- PLAYER LIST -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBalances"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPool"
+        app:layout_constraintBottom_toTopOf="@id/bottomControls"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#8338ec"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- BOTTOM CONTROLS -->
+    <LinearLayout
+        android:id="@+id/bottomControls"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:backgroundTint="#8338ec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount"
+            android:inputType="number"
+            android:layout_marginBottom="8dp"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAddPool"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="Bet"
+                android:background="@drawable/bg_button_green"
+                android:textColor="#FFD700"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnTakePool"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PayOut"
+                android:background="@drawable/bg_button_green"
+                android:textColor="#FFD700"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAllIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" 🔥 ALL IN"
+            android:textColor="#FFD700"
+            android:layout_marginTop="6dp"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

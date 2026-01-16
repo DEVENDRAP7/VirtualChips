@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "405684181152",
+    "project_id": "virtualchips-4adc4",
+    "storage_bucket": "virtualchips-4adc4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405684181152:android:ae8c4eef718162c15011c5",
+        "android_client_info": {
+          "package_name": "com.deven.virtualchips"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkk2V8grT5I_jF3_m77JhIkMA9i0QDqSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
